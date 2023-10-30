@@ -1,0 +1,217 @@
+<!-- Top header -->
+<div class="row">
+  <div class="col-md-12 top-header">
+    <span class="mr-3">Enjoy our brightest designs for $9.27 on 7/29. </span>
+    <div class="btn btn-md btn-shop">SHOP $9.27</div>
+  </div>
+</div>
+<!-- Header cart and login -->
+<div class="row">
+  <div class="col-md-12 header-cart">
+    <div class="header-cart-wrapper">
+      <ul class="header-cart-list">
+        <li>FREE SHIPPING OVER $35</li>
+        <li class="fr cart">
+          <a routerLink="/ptj/cart"><i class="fa-solid fa-cart-shopping mr-1"></i> {{cartQuantity}} ITEMS</a>
+        </li>
+        <li class="fr mr-4 c-login">
+          <a *ngIf="customerFullName.length == 0" class="customer-login" (click)="customerLoginClick()"> <i class="fa fa-user text-white"></i> 
+            LOGIN
+            <!-- Forgot password form-->
+            <div class="forgot-password-wrapper" (click)="stopBubbling($event)">
+              <div class="forgot-password-area">
+                <a (click)="customerLoginClick()"><i class="fas fa-angle-double-left"></i></a>
+                <p class="forgot-password-title">Verify your account</p>
+                <div class="forgot-mail-wrapper">
+                  <span class="form-forgot-password-title">Email</span>
+                  <br>
+                  <input type="text" class="forgot-password-input">
+                </div>
+
+                <div class="btn-forgot-password">Submit</div>
+              </div>
+            </div>
+
+            <!-- Login form -->
+            <div class="login-wrapper" (click)="stopBubbling($event)">
+              <div class="login-area">
+                <p class="login-title">Members Log in</p>
+
+                <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+                  <div class="mail-wrapper">
+                    <span class="form-login-title">Email</span>
+                    <br>
+                    <input type="text" formControlName="username" class="email-input" required>
+                  </div>
+  
+                  <div class="password-wrapper">
+                    <span class="form-login-title">Password</span>
+                    <br>
+                    <input type="password" formControlName="password" class="password-input" required>
+                  </div>
+                  <div class="other-action-title">
+                    <a (click)="onHandleSignUp();">Sign up</a>
+                    <a (click)="onHandleForgotPassword();">Forgot password ?</a>
+                  </div>
+                  <div class="btn-login" (click)="onLoginSubmit()">Sign in</div>
+                </form>
+
+              </div>
+            </div>
+
+             <!-- Signup form -->
+             <div class="signup-wrapper" (click)="stopBubbling($event)">
+              <div class="signup-area">
+                <a (click)="customerLoginClick()"><i class="fas fa-angle-double-left"></i></a>
+                <p class="signup-title">Become a member</p>
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmitSignUp()" >
+                  <div class="mail-wrapper">
+                    <span class="form-signup-title">Email</span>
+                    <br>
+                    <input type="text" required formControlName="username" class="signup-input">
+                  </div>
+                  <div class="mail-wrapper">
+                    <span class="form-signup-title">Fullname</span>
+                    <br>
+                    <input type="text" required formControlName="fullname" class="signup-input">
+                  </div>
+                  <div class="btn-signup" (click)="onSubmitSignUp()">Sign up</div>
+                </form>
+              </div>
+            </div>
+          </a>
+
+          <a class="customer-profile" *ngIf="customerFullName.length > 0" (click)="onHandleProfileClick()"><i class="fa fa-user text-white"></i>
+             {{customerFullName.toUpperCase()}}
+            
+            <div class="profile-wrapper-area" (click)="stopBubbling($event)">
+              <div class="profile-wrapper">
+                  <ul>
+                    <li>My profile</li>
+                    <li>Promo code</li>
+                    <li>My orders</li>
+                  </ul>
+                  <hr>
+                  <span (click)="onLogout();"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+              </div>
+            </div>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<div class="row">
+  <div class="col-md-12 top-nav-bar">
+    <div class="nav-bar-wrapper">
+      <div class="logo">
+        <a routerLink="/ptj"
+          ><img
+            width="218"
+            height="24"
+            src="//www.adornia.com/cdn/shop/t/20/assets/adornia-logo_new.png?v=109561619794480581821651109229"
+            alt="ADORNIA"
+        /></a>
+      </div>
+      <div class="main-nav">
+        <nav>
+          <ul class="navbar-top">
+            <li class="mr-4">
+              <a>SHOP <i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li class="mr-4">
+              <a>SALE <i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li class="mr-4"><a>ABOUT</a></li>
+            <li (click)="onShowTrack();">
+              <span *ngIf="!showTrack">TRACK YOUR ORDER</span>
+              <span *ngIf="showTrack">CLOSE</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Order track -->
+<div class="row" *ngIf="showTrack">
+  <div class="col-md-12">
+    <div class="top-track-order">
+      <div class="order-track-wrapper">
+
+        <div class="order-title-wrapper">
+          <div class="form-group">
+            <label for="order-id-txt">Fill in your order id correspond to the mail that you recieve: </label>
+            <input type="text" id="order-id-txt" #order_id>
+            <span (click)="onSearchOrder(order_id.value);"><i class="fa fa-search" aria-hidden="true"></i></span>
+          </div>
+        </div>
+
+        <table class="table table-hover">
+          <thead>
+            <th>Created</th>
+            <th>Ship to</th>
+            <th>Date pay</th>
+            <th>Pay type</th>
+            <th>Total pay</th>
+            <th>Order state</th>
+            <th>Estimate shipping date</th>
+            <th>Ship fee</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                {{formatDate(orderProduct.dateCreated.toString())}}
+              </td>
+              <td>{{orderProduct.addressDelivery}}</td>
+              <td>{{formatDate(orderProduct.datePay.toString())}}</td>
+              <td>{{orderProduct.payType}}</td>
+              <td>${{orderProduct.totalPay}}</td>
+              <td>{{orderProduct.orderState}}</td>
+
+              <td *ngIf="orderProduct.shipDate != null">{{formatDate(orderProduct.shipDate.toString())}}</td>
+              <td *ngIf="orderProduct.shipDate == null">Wait</td>
+              <td>${{orderProduct.shipFee}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="text-center viewDetail" *ngIf="orderProduct !=null" (click)="onViewOrderDetail();" >View order detail <i *ngIf="!isShowDetail" class="fa fa-chevron-down"></i> <i *ngIf="isShowDetail" class="fa fa-chevron-up"></i> </p>
+        <table class="table table-hover" style="width: 50%; margin-left: auto; margin-right: auto;" *ngIf="isShowDetail">
+          <thead>
+            <th>Product name</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of orderProduct.orderDetails">
+              <td>{{item.productDetail.product.name}}</td>
+              <td><img width="120" height="100" src="http://localhost:5275/img_products/{{item.productDetail.product.image}}"></td>
+              <td>{{item.quantity}}</td>
+              <td>${{item.salePrice}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><b>Save price</b></td>
+              <td>${{ cartTrackTotal - orderProduct.totalPay}} </td>
+
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><b>Cart total</b></td>
+              <td>${{orderProduct.totalPay}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="clear-text mt-2" style="height: 20px;"></div>
+      </div>
+    </div>
+  </div>
+</div>

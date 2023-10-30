@@ -1,0 +1,295 @@
+/* Custom login form */
+
+.customer-login {
+    cursor: pointer;
+    position: relative;
+}
+
+@keyframes smooth-appear {
+    to{
+      right: -30px;
+      opacity:1;
+    }
+  }
+
+.login-wrapper {
+    width: 300px;
+    max-height: 700px;
+    background: #F4B9A9;
+    top: 30px;
+    right: 0;
+    z-index: 999999;
+    position: absolute;
+    display: none;
+    opacity:0;
+    transform: translateX(-10%);
+    animation: smooth-appear 1s ease forwards;
+}
+
+.login-area {
+    padding: 10px 20px;
+}
+
+.login-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+/* Mail form */
+
+.email-input {
+    width: 260px;
+    padding:0px 14px;
+}
+
+.email-input:focus {
+    background-color: #F1F1F1;
+    outline:none;
+}
+
+/* Password form */
+
+.password-input {
+    width: 260px;
+    padding:0px 14px;
+}
+
+.password-input:focus {
+    background-color: #F1F1F1;
+    outline:none;
+}
+
+.form-login-title {
+    word-spacing: 4px;
+}
+
+.other-action-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-action-title a { 
+    text-decoration: underline !important;
+    color:coral;
+    cursor: pointer;
+}
+
+/* Button login */
+
+.btn-login {
+    width: 260px;
+    height: 40px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    background-color: #B9529E;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 40px;
+}
+/* Forgot password form*/
+
+.forgot-password-wrapper {
+    width: 300px;
+    max-height: 700px;
+    background: #F4B9A9;
+    top: 30px;
+    right: 0;
+    z-index: 999999999;
+    position: absolute;
+    display: none;
+    opacity:0;
+    transform: translateX(-10%);
+    animation: smooth-appear 1s ease forwards;
+}
+
+.forgot-password-area {
+    padding: 10px 20px;
+}
+
+.forgot-password-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.forgot-password-input {
+    width: 260px;
+    padding:0px 14px;
+}
+
+.forgot-password-input:focus {
+    background-color: #F1F1F1;
+    outline:none;
+}
+
+/* Button submit */
+
+.btn-forgot-password {
+    width: 260px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #B9529E;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+/* Signup form */
+
+.signup-wrapper {
+    width: 300px;
+    max-height: 700px;
+    background: #F4B9A9;
+    top: 30px;
+    right: 0;
+    z-index: 999999999;
+    position: absolute;
+    display: none;
+    opacity:0;
+    transform: translateX(-10%);
+    animation: smooth-appear 1s ease forwards;
+}
+
+.signup-area {
+    padding: 10px 20px;
+}
+
+.signup-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.signup-input {
+    width: 260px;
+    padding:0px 14px;
+}
+
+.signup-input:focus {
+    background-color: #F1F1F1;
+    outline:none;
+}
+
+/* Button submit */
+
+.btn-signup {
+    width: 260px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #B9529E;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+/* Profile css */
+
+.customer-profile {
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-wrapper-area {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    background-color: #F4B9A9;
+    width: 120px;
+    max-height: 200px;
+    display: none;
+    z-index: 9999999;
+}
+
+.customer-profile .profile-wrapper {
+    padding: 10px 12px;
+}
+
+.customer-profile .profile-wrapper hr {
+    margin: 0;
+}
+
+.customer-profile .profile-wrapper ul li {
+    list-style: none;
+    display: block;
+    font-size: 13px;
+}
+
+.customer-profile .profile-wrapper span {
+    font-size: 13px;
+}
+
+
+/* Order track */
+
+.top-track-order {
+    margin-left: 186px;
+    margin-right: 186px;
+}
+
+.order-title-wrapper {
+    display: flex;
+}
+
+.order-title-wrapper p {
+    font-size: 18px;
+}
+
+.order-title-wrapper span {
+    margin-left: 10px;
+    background-color: wheat;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-title-wrapper span i {
+    font-size: 12px;
+}
+
+#order-id-txt {
+    margin-left: 10px;
+    border: 1px solid #E5E5E5;
+    padding-left: 10px;
+}
+
+/* View detail */
+.viewDetail {
+    text-decoration: underline;
+    color:#0000FF; 
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* class for display and hide */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

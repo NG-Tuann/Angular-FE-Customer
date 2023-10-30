@@ -1,0 +1,198 @@
+/* Top header */
+.top-header {
+    background-color: var(--light-pink);
+    height: 59px;
+    padding:12px 0px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-header span {
+    height: 23px;
+}
+
+.btn-shop {
+    background-color: var(--deep-pink);
+    font-size: 12px !important;
+}
+
+/* Header cart */
+.header-cart {
+    background-color: var(--nude-color);
+    height:30px;
+}
+
+.header-cart-wrapper {
+    margin:0px 186px;
+}
+
+.header-cart-list {
+    color: var(--white-color);
+    font-size: 13px;
+    font-weight: lighter;
+    height: 30px;
+    margin: 0;
+}
+
+
+.header-cart-list li {
+    display: inline;
+    height: 30px !important;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.cart { 
+    background-color: var(--violet-color);
+    padding:0px 12px;
+}
+
+/*TOP NAV BAR*/
+.top-nav-bar {
+    height: 49px;
+    background-color: var(--white-color);
+}
+
+.nav-bar-wrapper {
+    margin: 0 186px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar-wrapper .logo {
+    font-size: 24px;
+}
+
+.main-nav {
+    height: 43px;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    display: inline;
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.main-nav ul li:hover {
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.navbar-top li a i{
+    font-size: 9px;
+    position: absolute;
+    top: 16px;
+}
+
+.thumbnail-slider {
+    position: relative;
+    background-image: url("https://www.adornia.com/cdn/shop/t/20/assets/slideshow_1.jpg?v=149200836183421397581678393838");
+    background-repeat: no-repeat;
+    height: 747px;
+    background-size: cover;
+}
+
+.banner-heading-wrap {
+    position: absolute;
+    top:300px;
+    right: 80px;
+}
+
+.slogan {
+    color:var(--white-color);
+    text-shadow: 0 0 0.6em rgba(0, 0, 0, 0.8);
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+.btn-shop-now {
+    background-color: var(--pastel-pink);
+    border-radius: 5px;
+    color: var(--white-color) !important;
+    font-weight: bolder;
+    font-size: 16px !important;
+}
+
+/* Branding */
+
+.logo-branding {
+    height: 65px;
+    background-color: var(--dark-grey);
+}
+
+.press-logos {
+    display: flex;
+    justify-content: center;
+}
+
+.press-as-seen {
+    color: #8B8B8B;
+    line-height: 65px;
+}
+
+/* Shop content */
+.shop-content {
+    margin-top: 40px;
+}
+
+.shop-title {
+    font-weight: 900;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+/* PRODUCT */ 
+
+.product-box {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.product-discount {
+    position: absolute;
+    background-color: var(--light-pink);
+    font-size: 14px;
+    padding:4px;
+    right: 0;
+}
+
+.product-name {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.product-price {
+    color: #999999;
+    font-size: 12px;
+}
+
+/* Footer wrapper */
+
+.footer-wrapper {
+    height: 371px;
+    background-color: var(--nude-color);
+}
+
+.footer-wrapper-end {
+    margin-left: 186px;
+    margin-right: 186px;
+    margin-top: 30px;
+}
+
+.footer-wrapper-end ul li  {
+    color: var(--white-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-wrapper {
+    padding-left: 186px;
+    padding-right: 186px;
+}

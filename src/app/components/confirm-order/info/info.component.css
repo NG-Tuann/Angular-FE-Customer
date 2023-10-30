@@ -1,0 +1,56 @@
+#info-wrapper {
+    margin-left: 186px;
+}
+
+.process span {
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.process span i {
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+
+/* Process to shipping */
+
+.process-to-shipping {
+    position: relative;
+}
+
+.process-to-shipping a {
+    cursor: pointer;
+}
+.process-to-shipping span {
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+}
+
+.process-to-shipping span i {
+    margin-right: 20px;
+}
+
+.continue-to-shipping-btn {
+    width: 179px;
+    height: 65px;
+    text-align: center;
+    background-color: #B9529E;
+    color:#FFFFFF;
+    line-height: 65px;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+}
+
+.continue-to-shipping-btn:hover {
+    background-color: #92417D;
+}
+
+.policy-decor a{
+    color: #B9529E;
+    text-decoration: underline !important;
+    font-size: 12px;
+    margin-right: 20px;
+}

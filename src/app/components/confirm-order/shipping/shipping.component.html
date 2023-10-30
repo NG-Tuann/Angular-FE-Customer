@@ -1,0 +1,81 @@
+<div class="row" id="shipping-info-wrapper">
+    <div class="col-md-12">
+        <div class="process">
+            <span>Cart<i class="fas fa-chevron-right"></i></span>
+            <span >Information<i class="fas fa-chevron-right"></i></span>
+            <span><b>Shipping<i class="fas fa-chevron-right"></i></b></span>
+            <span>Payment</span>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-10" id="info-wrapper-area">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="title">Contact</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="content">{{info.mail}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="edit-info float-right"><a>Change</a></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="title">Ship to</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="content">{{info.address}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="edit-info float-right"><a>Change</a></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="title">Fullname</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="content">{{info.fullname}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="edit-info float-right"><a>Change</a></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="title">Phone</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="content">{{info.phone}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="edit-info float-right"><a>Change</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <p style="font-size: 18px; font-weight: bold;">Shipping method</p>
+                <div class="shipping-free-info" style="width: 636px">
+                    <span>USPS over $100</span>
+                    <b class="float-right">Free</b>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process to shipping part -->
+        <div class="row mb-4 mt-4">
+            <div class="continue-to-payment-wrapper">
+                <div class="process-to-payment mb-2">
+                    <a style="color:coral;margin-top: 18px;"><span><i class="fas fa-chevron-left"></i>Return to shipping</span></a>
+                    <div class="continue-to-payment-btn" (click)="onContinueToPayment();">Continue to payment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

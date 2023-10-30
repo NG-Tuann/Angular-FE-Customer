@@ -1,0 +1,81 @@
+#shipping-info-wrapper {
+    margin-left: 186px;
+}
+
+.process span {
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.process span i {
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+#info-wrapper-area {
+    border: 1px solid #C5C5C5;
+    padding: 20px 15px;
+}
+
+.content {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 13px;
+}
+
+.edit-info {
+    color: rosybrown;
+    text-decoration: underline !important;
+    font-size: 12px;
+}
+
+.shipping-free-info {
+    color: #333;
+    background-color: #FBE5EE;
+    padding: 20px 15px;
+    border-radius: 4px;
+    width: 597px;
+
+}
+
+
+/* Process to shipping */
+
+.process-to-payment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.process-to-payment a {
+    cursor: pointer;
+}
+.process-to-payment span {
+    font-size: 14px;
+}
+
+.process-to-payment span i {
+    margin-right: 20px;
+}
+
+.continue-to-payment-btn {
+    width: 179px;
+    height: 65px;
+    text-align: center;
+    background-color: #B9529E;
+    color:#FFFFFF;
+    line-height: 65px;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+}
+
+.continue-to-payment-btn:hover {
+    background-color: #92417D;
+}
+
+.continue-to-payment-wrapper {
+    width: 650px;
+}

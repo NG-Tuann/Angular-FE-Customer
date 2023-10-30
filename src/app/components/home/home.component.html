@@ -1,0 +1,157 @@
+<!-- Thumbnail -->
+<div class="row">
+  <div class="col-md-12 thumbnail-slider">
+    <div class="banner-heading-wrap">
+      <h1 class="slogan">Make a better day</h1>
+      <div class="btn btn-lg btn-shop-now">SHOP NOW</div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGO BRANDING -->
+<div class="row">
+  <div class="col-md-12 logo-branding">
+    <div class="press-logos">
+      <p class="press-as-seen mr-3">As seen in</p>
+      <img
+        class="mr-3"
+        width="66"
+        height="60"
+        src="//www.adornia.com/cdn/shop/t/20/assets/logo_image_1?v=181147358811407263131651109260"
+        alt="Ok! Magazine Logo"
+      />
+      <img
+        class="mr-3"
+        width="150"
+        height="60"
+        src="//www.adornia.com/cdn/shop/t/20/assets/logo_image_2?v=35771964477544557231651109261"
+        alt="Financial Times Logo"
+      />
+      <img
+        class="mr-3"
+        width="150"
+        height="60"
+        src="//www.adornia.com/cdn/shop/t/20/assets/logo_image_3?v=138944601258644817421651109261"
+        alt="InStyle Magazine Logo"
+      />
+      <img
+        class="mr-3"
+        width="150"
+        height="60"
+        src="//www.adornia.com/cdn/shop/t/20/assets/logo_image_4?v=147352766827231829371651109262"
+        alt="Cosmopolitan Magazine Logo"
+      />
+      <img
+        width="66"
+        height="60"
+        src="//www.adornia.com/cdn/shop/t/20/assets/logo_image_5?v=123351490560640965371651109263"
+        alt="NBC Logo"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<h2 class="text-center shop-content">
+  LUXURY TREND JEWELRY FOR YOUR EVERYDAY.
+</h2>
+
+
+<h2 class="text-center shop-title">Special Product</h2>
+
+<!-- HOME FLAG PRODUCT SHOW -->
+<div class="row product-wrapper">
+  <div class="col-md-4" *ngFor="let product of productHomeFlags">
+    <a routerLink='detail/{{product.id}}'>
+      <div class="product-box">
+        <div class="product-discount" *ngIf="product.active">
+          {{ product.discount_value }}{{ product.unit }} off
+        </div>
+        <img
+          src="http://localhost:5275/img_products/{{ product.image }}"
+          width="360"
+          height="383"
+        />
+        <p class="product-name">{{ product.name }}</p>
+        <div *ngIf="product.active">
+          <del style="color: silver; font-size: 12px"
+            ><small>${{ product.price }}</small></del
+          >
+          <span class="product-price" style="font-size: 16px;">
+            ${{ (product.price * (100 - product.discount_value)) / 100 }}</span
+          >
+        </div>
+        <div *ngIf="!product.active" style="font-size: 16px;">
+          <span class="product-price"> ${{ product.price }}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<h2 class="text-center shop-title">Best Seller Product</h2>
+
+<!-- BEST SELLER PRODUCT SHOW -->
+<div class="row product-wrapper">
+  <div class="col-md-4" *ngFor="let product of productBestSellers">
+    <a routerLink='detail/{{product.id}}'>
+      <div class="product-box">
+        <div class="product-discount" *ngIf="product.active">
+          {{ product.discount_value }}{{ product.unit }} off
+        </div>
+        <img
+          src="http://localhost:5275/img_products/{{ product.image }}"
+          width="360"
+          height="383"
+        />
+        <p class="product-name">{{ product.name }}</p>
+        <div *ngIf="product.active">
+          <del style="color: silver; font-size: 12px"
+            ><small>${{ product.price }}</small></del
+          >
+          <span class="product-price">
+            ${{ (product.price * (100 - product.discount_value)) / 100 }}</span
+          >
+        </div>
+        <div *ngIf="!product.active">
+          <span class="product-price"> ${{ product.price }}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+<h2 class="text-center shop-title">Shop Trending Styles</h2>
+
+<!-- PRODUCT SHOW -->
+<div class="row product-wrapper">
+  <div class="col-md-4" *ngFor="let product of products">
+    <a routerLink='detail/{{product.id}}'>
+      <div class="product-box">
+        <div class="product-discount" *ngIf="product.active">
+          {{ product.discount_value }}{{ product.unit }} off
+        </div>
+        <img
+          src="http://localhost:5275/img_products/{{ product.image }}"
+          width="360"
+          height="383"
+        />
+        <p class="product-name">{{ product.name }}</p>
+        <div *ngIf="product.active">
+          <del style="color: silver; font-size: 12px"
+            ><small>${{ product.price }}</small></del
+          >
+          <span class="product-price">
+            ${{ (product.price * (100 - product.discount_value)) / 100 }}</span
+          >
+        </div>
+        <div *ngIf="!product.active">
+          <span class="product-price"> ${{ product.price }}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

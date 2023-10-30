@@ -1,0 +1,66 @@
+<div class="row" id="info-wrapper">
+    <div class="col-md-12">
+        <div class="process">
+            <span>Cart<i class="fas fa-chevron-right"></i></span>
+            <span ><b>Information<i class="fas fa-chevron-right"></i></b></span>
+            <span>Shipping<i class="fas fa-chevron-right"></i></span>
+            <span>Payment</span>
+        </div>
+        <hr>
+        <div class="contact-mail-info">
+            <span style="font-size: 18px; font-weight: 600;">Contact</span>
+            <span class="float-right" style="font-size: 14px;">Already have account? <a href="#" style="color:coral; text-decoration: underline;">Login here</a></span>
+        </div>
+
+        <!-- Input mail customer -->
+        <div class="form-group mt-2">
+            <input type="text" class="form-control" placeholder="Email address*" [(ngModel)]="info.mail">
+            <input type="checkbox" id="allow-send-mail" class="mr-2 mt-2">
+            <label for="allow-send-mail">Send me promotion code</label>
+        </div>
+
+        <div class="address-info mt-3">
+            <span style="font-size: 18px; font-weight: 600;">Shipping address</span>
+        </div>
+
+         <!-- Input mail customer -->
+         <div class="form-group mt-2">
+            <input type="text" class="form-control" placeholder="Your address*" [(ngModel)]="info.address">
+        </div>
+
+        <div class="fullname-info mt-3">
+            <span style="font-size: 18px; font-weight: 600;">Fullname</span>
+        </div>
+
+         <!-- Input mail customer -->
+         <div class="form-group mt-2">
+            <input type="text" class="form-control" placeholder="Name*" [(ngModel)]="info.fullname">
+        </div>
+
+        <div class="phone-info mt-3">
+            <span style="font-size: 18px; font-weight: 600;">Phone</span>
+        </div>
+        
+        <!-- Input phone customer -->
+        <div class="form-group mt-2">
+            <input type="text" class="form-control" placeholder="Phone number*" [(ngModel)]="info.phone">
+        </div>
+
+        <!-- policy -->
+        <div class="policy-decor">
+            <a>Refund policy</a>
+            <a>Privacy policy</a>
+            <a>Term of services</a>
+        </div>
+        
+        <hr>
+        
+        <!-- Process to shipping part -->
+
+        <div class="process-to-shipping mb-2">
+            <a style="color:coral;"><span><i class="fas fa-chevron-left"></i>Return to cart</span></a>
+            <div class="continue-to-shipping-btn mb-4" (click)="onContinueToShipping();">Continue to shipping</div>
+        </div>
+
+    </div>
+</div>
